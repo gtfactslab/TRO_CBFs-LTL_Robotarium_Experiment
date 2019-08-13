@@ -30,8 +30,8 @@ function [hAtx, hBtx, y] = ReachC_ver2(X, eps1, eps2, PA, PB, PC, CA, CB, CC, al
     B2 = gamma*(hAtx)^3;
     B3 = gamma*(hBtx)^3;
          
-    a = [A1 0 0; A2 -1 0; A3 0 -1; 0 0 -1 0; 0 0 0 -1];
-    b = [B1; B2; B3; 0; 0];
+    a = [A1 0 0; A2 -1 0; A3 0 -1];
+    b = [B1; B2; B3];
     
     tic
     y = quadprog(H, [], a, b, [], [], [], [], []);
