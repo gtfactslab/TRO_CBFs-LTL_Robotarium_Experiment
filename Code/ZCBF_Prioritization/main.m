@@ -36,14 +36,22 @@ U = [];
 U = [U, norm([u0(1:2,:)])^2];
 Hax = [];
 Hbx = [];
-alphaA = 0.01;
-alphaB = 30;
+
+% Different weights
+% alphaA = 10;
+% alphaB = 1;
+
+% alphaA = 1;
+% alphaB = 0.1;
+% 
+alphaA = 0.1;
+alphaB = 1;
 
 %% Algorithm
 
 while( hgCx < 0 )
     
-    [hAtx, hBtx, dx] = ReachC(X(:,i), u(3,i), u(4,i), PA, PB, PC, CA, CB, CC, alphaA, alphaB);
+    [hAtx, hBtx, dx] = ReachC_ver2(X(:,i), PA, PB, PC, CA, CB, CC, alphaA, alphaB);
     u(3,i+1) = dx(3);
     u(4,i+1) = dx(4);
     u(1:2,i+1) = dx(1:2);
