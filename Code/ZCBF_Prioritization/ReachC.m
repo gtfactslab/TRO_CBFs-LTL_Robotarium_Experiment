@@ -1,4 +1,4 @@
-function [hAtx, hBtx, y] = ReachC_ver2(X, eps1, eps2, PA, PB, PC, CA, CB, CC, alphaA, alphaB)
+function [hAtx, hBtx, y] = ReachC(X, PA, PB, PC, CA, CB, CC, alphaA, alphaB)
 
     gamma = 1;
 
