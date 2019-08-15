@@ -51,7 +51,7 @@ alphaB = 1;
 
 while( hgCx < 0 )
     
-    [hAtx, hBtx, dx] = ReachC_ver2(X(:,i), PA, PB, PC, CA, CB, CC, alphaA, alphaB);
+    [hAtx, hBtx, dx] = ReachC(X(:,i), PA, PB, PC, CA, CB, CC, alphaA, alphaB);
     u(3,i+1) = dx(3);
     u(4,i+1) = dx(4);
     u(1:2,i+1) = dx(1:2);
