@@ -1,5 +1,7 @@
 # Code for Robotarium Experiment
-This is MATLAB code for implementing the case study in our paper titled "Control Of Mobile Robots Using Barrier Functions Under Temporal Logic Specifications". This code was uploaded to the Robotarium for implementation on the actual robots.
+This is MATLAB code for implementing the case study in our paper titled "Control Of Mobile Robots Using Barrier Functions Under Temporal Logic Specifications" under review in the IEEE Transactions on Robotics (T-RO).
+
+This code was uploaded to the Robotarium for implementation on the actual robots. The code in this repository provides a MATLAB simulation of the experiment.
 
 # Instructions for executing Robotarium code
 
