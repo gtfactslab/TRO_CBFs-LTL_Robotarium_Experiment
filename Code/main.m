@@ -1,9 +1,9 @@
-% Trajectory synthesis for mobile robots using Control Barrier Functions
-% and Linear Temporal Logic
-
+% Control of Mobile Robots Using Barrier Functions Under Temporal Logic
+% Specifications
+%
 % NOTE: Please run the "init.m" file from the Robotarium package prior to
 %       executing this code
-
+%
 % Authors: Mohit Srinivasan and Samuel Coogan
 % 08/12/2019
 
