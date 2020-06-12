@@ -2,3 +2,5 @@
 
 The objective of this code is to showcase the advantage of Theorem 1 in the paper.
 
+![alt text](https://github.com/gtfactslab/TRO_CBFs-LTL_Robotarium_Experiment/tree/master/figs/trad_traj.png?raw=true)
+
