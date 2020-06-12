@@ -13,6 +13,7 @@
 %              "ReachAB_trad.m" runs the traditional finite time control
 %              barrier functions which results in an infeasible solution
 %
+
 clear all;
 clc;
 close all;
