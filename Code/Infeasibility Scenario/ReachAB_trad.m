@@ -25,19 +25,19 @@ function [hg1, hg2, flag, y] = ReachAB_trad(X)
     
     A1 = 2*(X - [C2; 0; 0])'*P_2;
     A2 = 2*(X - [0 ; 0; C3])'*P_3;
-    A3 = - [0, 0, (2*dconn)*(2*(X(3) + 0.2)^1), 0] + [2*(X(1) - X(3)), 2*(X(2) - X(4)), -2*(X(1) - X(3)), -2*(X(2) - X(4))];
+    A3 = - [0, 0, (2*dconn)*(2*(X(3) + 0.2)^1), 0] + ...
+                [2*(X(1) - X(3)), 2*(X(2) - X(4)), -2*(X(1) - X(3)), ...
+                    -2*(X(2) - X(4))];
     
     B1 = gamma*sign(hg1);
     B2 = gamma*sign(hg2);
     B3 = gamma*hg3;
 
-    a = [A1; A2; A3; 1 0 0 0; 0 1 0 0; -1 0 0 0; 0 -1 0 0; 0 0 1 0; 0 0 0 1; 0 0 -1 0; 0 0 0 -1];
+    a = [A1; A2; A3; 1 0 0 0; 0 1 0 0; -1 0 0 0; 0 -1 0 0; 0 0 1 0; ...
+            0 0 0 1; 0 0 -1 0; 0 0 0 -1];
     b = [B1; B2; B3; 2; 2; 2; 2; 2; 2; 2; 2];
     
     opts = optimoptions(@quadprog, 'Display', 'off');
     [y, ~, flag] = quadprog(H, [], a, b, [], [], [], [], [], opts);
-    if flag < 0
-        disp('Program is infeasible!');
-    end
     
 end

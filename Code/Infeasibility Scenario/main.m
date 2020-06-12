@@ -1,14 +1,23 @@
-%% Prioritization scheme for zeroing barrier functions
-% Authors: Mohit Srinivasan & Sam Coogan
-% Version: 1
-% Date: 01/02/2019
-
-%close all;
+% Comparison between traditional finite time control barrier functions
+% and Composite finite time control barrier functions
+%
+% Authors: Mohit Srinivasan, Samuel Coogan
+% Date:    06/11/2020
+%
+% Description: This file simulates a simple example with two agents tasked
+%              with reaching separate goal regions, while satisfying a
+%              connectivity constraint. Two approaches can be used to model
+%              this task. "ReachAB_comp.m" is the file that runs the
+%              composite finite time control barrier function (Theorem 1)
+%              in order to satisfy the task specification, whereas
+%              "ReachAB_trad.m" runs the traditional finite time control
+%              barrier functions which results in an infeasible solution
+%
 clear all;
 clc;
+close all;
 
 %% Initialization of system parameters
-
 X = [];
 u = [];
 u0 = [0; 0; 0; 0];
@@ -32,18 +41,22 @@ F = [];
 while( hgAx <= 0 || hgBx <= 0)
     
     [hgAx, hgBx, flag, dx] = ReachAB_comp(X(:,i));
-    HAx = [HAx, hgAx];
-    HBx = [HBx, hgBx];
     F = [F, flag];
 
     if flag < 0
         break;
     end
+    
     X(:,i+1) = X(:,i) + dt*dx;
     i = i+1;
 end
 
-%% Plot Trajectory of system
+%% Plot Trajectory of the agents
 if min(F) < 0
    disp('Infeasibility occurred!')
+else
+    disp('Program was feasible!')
 end
+
+figure(1)
+PlotEverything(X);
