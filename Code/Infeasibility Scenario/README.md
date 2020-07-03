@@ -1,6 +1,9 @@
 # Comparison between traditional finite time control barrier functions and composite finite time control barrier functions
 
-The objective of this code is to showcase the advantage of Theorem 1 in the paper.
+The objective of the code in this folder is to showcase the advantage of Theorem 1 in the paper. In 
+```math
+E = m \cdot c
+```
 
 ![Alt text](/figs/trad_traj.png?raw=true)
 
