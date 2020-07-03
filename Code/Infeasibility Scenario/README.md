@@ -2,5 +2,5 @@
 
 The objective of this code is to showcase the advantage of Theorem 1 in the paper.
 
-![Alt text](/figs/trad_traj.png?raw=true width="100" height="100")
+![Alt text](/figs/trad_traj.png?raw=true)
 
