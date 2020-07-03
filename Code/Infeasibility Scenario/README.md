@@ -2,7 +2,7 @@
 
 The objective of the code in this folder is to showcase the advantage of Theorem 1 in the paper. In 
 ```math
-E = m \cdot c
+$E = m \cdot c$
 ```
 
 ![Alt text](/figs/trad_traj.png?raw=true)
